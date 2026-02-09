@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace></RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <MyType>WindowsForms</MyType>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <ApplicationIcon>lobo icoge.ico</ApplicationIcon>
+    <Platforms>AnyCPU;x64;ARM32</Platforms>
+    <ImportedNamespaces>Microsoft.SqlServer.Server=False,System.Data=False,System.Data.SqlClient=False,System.Drawing=False,System.Windows.Forms=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,BUAP 2026=True</ImportedNamespaces>
+    <AssemblyName />
+    <UseWPF>True</UseWPF>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageIcon>descarga.jpg</PackageIcon>
+    <PackAsTool>True</PackAsTool>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>C:\Temp\buap-output\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM32'">
+    <OutputPath>C:\Temp\buap-output\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutputPath>C:\Temp\buap-output\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>C:\Temp\buap-output\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM32'">
+    <OutputPath>C:\Temp\buap-output\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutputPath>C:\Temp\buap-output\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Inicio.vb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="Inicio.vb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="lobo icoge.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="Microsoft.SqlServer.Server" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.SqlClient" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\Users\gonza\Downloads\juegos de ps4 para j y fix\descarga.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.4" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+</Project>
